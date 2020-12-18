@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,14 +47,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ajouter_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter_Client.Designer.cs">
+      <DependentUpon>Ajouter_Client.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GereData.cs" />
+    <Compile Include="Liste_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liste_Client.Designer.cs">
+      <DependentUpon>Liste_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_Client.Designer.cs">
+      <DependentUpon>Modifier_Client.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Suppremer_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suppremer_Client.Designer.cs">
+      <DependentUpon>Suppremer_Client.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ajouter_Client.resx">
+      <DependentUpon>Ajouter_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liste_Client.resx">
+      <DependentUpon>Liste_Client.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +98,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Suppremer_Client.resx">
+      <DependentUpon>Suppremer_Client.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

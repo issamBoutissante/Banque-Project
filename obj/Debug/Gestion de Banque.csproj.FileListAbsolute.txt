@@ -1,0 +1,13 @@
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\bin\Debug\Gestion de Banque.exe.config
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\bin\Debug\Gestion de Banque.exe
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\bin\Debug\Gestion de Banque.pdb
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion de Banque.csprojAssemblyReference.cache
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Form1.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Liste_Client.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Properties.Resources.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion de Banque.csproj.GenerateResource.cache
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion de Banque.csproj.CoreCompileInputs.cache
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion de Banque.exe
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion de Banque.pdb
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Ajouter_Client.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Suppremer_Client.resources
