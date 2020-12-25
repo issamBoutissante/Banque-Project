@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gestion_de_Banque
@@ -25,10 +18,6 @@ namespace Gestion_de_Banque
 
         private void Suppremer_Client_Load(object sender, EventArgs e)
         {
-            foreach(var reader in gereData.GetData("select num_client as numero from client"))
-            {
-                Numero.Items.Add(reader["numero"]);
-            }
         }
 
         private void Numero_SelectedIndexChanged(object sender, EventArgs e)
@@ -37,6 +26,16 @@ namespace Gestion_de_Banque
             {
                 Nom.Text = reader["nom_client"].ToString();
                 Prenom.Text = reader["prenom_client"].ToString();
+            }
+        }
+
+        private void Numero_Click(object sender, EventArgs e)
+        {
+            Numero.Items.Clear();
+            
+            foreach (var reader in gereData.GetData("select num_client as numero from client"))
+            {
+                Numero.Items.Add(reader["numero"]);
             }
         }
     }

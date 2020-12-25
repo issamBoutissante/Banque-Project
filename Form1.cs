@@ -49,5 +49,25 @@ namespace Gestion_de_Banque
         {
             openForm(new Modifier_Client());
         }
+
+        private void listeCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openForm(new Liste_Compte());
+        }
+
+        private void ajouteCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openForm(new Ajouter_Compte());
+        }
+
+        private void modificationCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openForm(new Modifier_Compte());
+        }
+
+        private void suppressionCompteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openForm(new Suprimer_Compte());
+        }
     }
 }

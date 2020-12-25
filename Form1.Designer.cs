@@ -76,28 +76,28 @@
             // listClientToolStripMenuItem
             // 
             this.listClientToolStripMenuItem.Name = "listClientToolStripMenuItem";
-            this.listClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listClientToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.listClientToolStripMenuItem.Text = "List Client";
             this.listClientToolStripMenuItem.Click += new System.EventHandler(this.listClientToolStripMenuItem_Click);
             // 
             // ajouterClientToolStripMenuItem
             // 
             this.ajouterClientToolStripMenuItem.Name = "ajouterClientToolStripMenuItem";
-            this.ajouterClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajouterClientToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.ajouterClientToolStripMenuItem.Text = "Ajouter Client";
             this.ajouterClientToolStripMenuItem.Click += new System.EventHandler(this.ajouterClientToolStripMenuItem_Click);
             // 
             // modificationClientToolStripMenuItem
             // 
             this.modificationClientToolStripMenuItem.Name = "modificationClientToolStripMenuItem";
-            this.modificationClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificationClientToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.modificationClientToolStripMenuItem.Text = "Modifier Client";
             this.modificationClientToolStripMenuItem.Click += new System.EventHandler(this.modificationClientToolStripMenuItem_Click);
             // 
             // suppressionClientToolStripMenuItem
             // 
             this.suppressionClientToolStripMenuItem.Name = "suppressionClientToolStripMenuItem";
-            this.suppressionClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.suppressionClientToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.suppressionClientToolStripMenuItem.Text = "Suppremer Client";
             this.suppressionClientToolStripMenuItem.Click += new System.EventHandler(this.suppressionClientToolStripMenuItem_Click);
             // 
@@ -117,24 +117,28 @@
             this.listeCompteToolStripMenuItem.Name = "listeCompteToolStripMenuItem";
             this.listeCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listeCompteToolStripMenuItem.Text = "Liste Compte";
+            this.listeCompteToolStripMenuItem.Click += new System.EventHandler(this.listeCompteToolStripMenuItem_Click);
             // 
             // ajouteCompteToolStripMenuItem
             // 
             this.ajouteCompteToolStripMenuItem.Name = "ajouteCompteToolStripMenuItem";
             this.ajouteCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajouteCompteToolStripMenuItem.Text = "Ajouter Compte";
+            this.ajouteCompteToolStripMenuItem.Click += new System.EventHandler(this.ajouteCompteToolStripMenuItem_Click);
             // 
             // modificationCompteToolStripMenuItem
             // 
             this.modificationCompteToolStripMenuItem.Name = "modificationCompteToolStripMenuItem";
             this.modificationCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificationCompteToolStripMenuItem.Text = "Modifier Compte";
+            this.modificationCompteToolStripMenuItem.Click += new System.EventHandler(this.modificationCompteToolStripMenuItem_Click);
             // 
             // suppressionCompteToolStripMenuItem
             // 
             this.suppressionCompteToolStripMenuItem.Name = "suppressionCompteToolStripMenuItem";
             this.suppressionCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.suppressionCompteToolStripMenuItem.Text = "Suppremer Compte";
+            this.suppressionCompteToolStripMenuItem.Click += new System.EventHandler(this.suppressionCompteToolStripMenuItem_Click);
             // 
             // menuMouvementToolStripMenuItem
             // 

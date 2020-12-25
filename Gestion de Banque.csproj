@@ -53,6 +53,18 @@
     <Compile Include="Ajouter_Client.Designer.cs">
       <DependentUpon>Ajouter_Client.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ajouter_Compte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter_Compte.Designer.cs">
+      <DependentUpon>Ajouter_Compte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajouter_Movement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter_Movement.Designer.cs">
+      <DependentUpon>Ajouter_Movement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +78,23 @@
     <Compile Include="Liste_Client.Designer.cs">
       <DependentUpon>Liste_Client.cs</DependentUpon>
     </Compile>
+    <Compile Include="Liste_Compte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liste_Compte.Designer.cs">
+      <DependentUpon>Liste_Compte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modifier_Client.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modifier_Client.Designer.cs">
       <DependentUpon>Modifier_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifier_Compte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifier_Compte.Designer.cs">
+      <DependentUpon>Modifier_Compte.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,14 +104,38 @@
     <Compile Include="Suppremer_Client.Designer.cs">
       <DependentUpon>Suppremer_Client.cs</DependentUpon>
     </Compile>
+    <Compile Include="Suprimer_Compte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suprimer_Compte.Designer.cs">
+      <DependentUpon>Suprimer_Compte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suprimer_Movement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suprimer_Movement.Designer.cs">
+      <DependentUpon>Suprimer_Movement.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Ajouter_Client.resx">
       <DependentUpon>Ajouter_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajouter_Compte.resx">
+      <DependentUpon>Ajouter_Compte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Liste_Client.resx">
       <DependentUpon>Liste_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liste_Compte.resx">
+      <DependentUpon>Liste_Compte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_Client.resx">
+      <DependentUpon>Modifier_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifier_Compte.resx">
+      <DependentUpon>Modifier_Compte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +148,9 @@
     </Compile>
     <EmbeddedResource Include="Suppremer_Client.resx">
       <DependentUpon>Suppremer_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suprimer_Compte.resx">
+      <DependentUpon>Suprimer_Compte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

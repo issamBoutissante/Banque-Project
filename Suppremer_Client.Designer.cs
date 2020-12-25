@@ -107,6 +107,7 @@
             this.Numero.Size = new System.Drawing.Size(102, 21);
             this.Numero.TabIndex = 16;
             this.Numero.SelectedIndexChanged += new System.EventHandler(this.Numero_SelectedIndexChanged);
+            this.Numero.Click += new System.EventHandler(this.Numero_Click);
             // 
             // Suppremer_Client
             // 
