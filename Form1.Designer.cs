@@ -42,6 +42,7 @@
             this.menuMouvementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajoutMouvementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suppressionMouvementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeMouvementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.virementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeVirementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajoutVirementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -115,28 +116,28 @@
             // listeCompteToolStripMenuItem
             // 
             this.listeCompteToolStripMenuItem.Name = "listeCompteToolStripMenuItem";
-            this.listeCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listeCompteToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.listeCompteToolStripMenuItem.Text = "Liste Compte";
             this.listeCompteToolStripMenuItem.Click += new System.EventHandler(this.listeCompteToolStripMenuItem_Click);
             // 
             // ajouteCompteToolStripMenuItem
             // 
             this.ajouteCompteToolStripMenuItem.Name = "ajouteCompteToolStripMenuItem";
-            this.ajouteCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajouteCompteToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.ajouteCompteToolStripMenuItem.Text = "Ajouter Compte";
             this.ajouteCompteToolStripMenuItem.Click += new System.EventHandler(this.ajouteCompteToolStripMenuItem_Click);
             // 
             // modificationCompteToolStripMenuItem
             // 
             this.modificationCompteToolStripMenuItem.Name = "modificationCompteToolStripMenuItem";
-            this.modificationCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificationCompteToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.modificationCompteToolStripMenuItem.Text = "Modifier Compte";
             this.modificationCompteToolStripMenuItem.Click += new System.EventHandler(this.modificationCompteToolStripMenuItem_Click);
             // 
             // suppressionCompteToolStripMenuItem
             // 
             this.suppressionCompteToolStripMenuItem.Name = "suppressionCompteToolStripMenuItem";
-            this.suppressionCompteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.suppressionCompteToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.suppressionCompteToolStripMenuItem.Text = "Suppremer Compte";
             this.suppressionCompteToolStripMenuItem.Click += new System.EventHandler(this.suppressionCompteToolStripMenuItem_Click);
             // 
@@ -144,7 +145,8 @@
             // 
             this.menuMouvementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajoutMouvementToolStripMenuItem,
-            this.suppressionMouvementToolStripMenuItem});
+            this.suppressionMouvementToolStripMenuItem,
+            this.listeMouvementToolStripMenuItem});
             this.menuMouvementToolStripMenuItem.Name = "menuMouvementToolStripMenuItem";
             this.menuMouvementToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
             this.menuMouvementToolStripMenuItem.Text = "Mouvement";
@@ -154,12 +156,21 @@
             this.ajoutMouvementToolStripMenuItem.Name = "ajoutMouvementToolStripMenuItem";
             this.ajoutMouvementToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.ajoutMouvementToolStripMenuItem.Text = "Ajouter Mouvement";
+            this.ajoutMouvementToolStripMenuItem.Click += new System.EventHandler(this.ajoutMouvementToolStripMenuItem_Click);
             // 
             // suppressionMouvementToolStripMenuItem
             // 
             this.suppressionMouvementToolStripMenuItem.Name = "suppressionMouvementToolStripMenuItem";
             this.suppressionMouvementToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.suppressionMouvementToolStripMenuItem.Text = "Suppremer Mouvement";
+            this.suppressionMouvementToolStripMenuItem.Click += new System.EventHandler(this.suppressionMouvementToolStripMenuItem_Click);
+            // 
+            // listeMouvementToolStripMenuItem
+            // 
+            this.listeMouvementToolStripMenuItem.Name = "listeMouvementToolStripMenuItem";
+            this.listeMouvementToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.listeMouvementToolStripMenuItem.Text = "Liste Mouvement";
+            this.listeMouvementToolStripMenuItem.Click += new System.EventHandler(this.listeMouvementToolStripMenuItem_Click);
             // 
             // virementToolStripMenuItem
             // 
@@ -176,18 +187,21 @@
             this.listeVirementToolStripMenuItem.Name = "listeVirementToolStripMenuItem";
             this.listeVirementToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.listeVirementToolStripMenuItem.Text = "liste Virement";
+            this.listeVirementToolStripMenuItem.Click += new System.EventHandler(this.listeVirementToolStripMenuItem_Click);
             // 
             // ajoutVirementToolStripMenuItem
             // 
             this.ajoutVirementToolStripMenuItem.Name = "ajoutVirementToolStripMenuItem";
             this.ajoutVirementToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.ajoutVirementToolStripMenuItem.Text = "Ajouter Virement";
+            this.ajoutVirementToolStripMenuItem.Click += new System.EventHandler(this.ajoutVirementToolStripMenuItem_Click);
             // 
             // suppremerVirementToolStripMenuItem
             // 
             this.suppremerVirementToolStripMenuItem.Name = "suppremerVirementToolStripMenuItem";
             this.suppremerVirementToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.suppremerVirementToolStripMenuItem.Text = "Suppremer Virement";
+            this.suppremerVirementToolStripMenuItem.Click += new System.EventHandler(this.suppremerVirementToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -227,6 +241,7 @@
         private System.Windows.Forms.ToolStripMenuItem listeVirementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajoutVirementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suppremerVirementToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeMouvementToolStripMenuItem;
     }
 }
 

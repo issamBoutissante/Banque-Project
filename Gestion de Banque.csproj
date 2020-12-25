@@ -65,6 +65,12 @@
     <Compile Include="Ajouter_Movement.Designer.cs">
       <DependentUpon>Ajouter_Movement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ajouter_Verment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter_Verment.Designer.cs">
+      <DependentUpon>Ajouter_Verment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,18 @@
     </Compile>
     <Compile Include="Liste_Compte.Designer.cs">
       <DependentUpon>Liste_Compte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liste_mouvement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liste_mouvement.Designer.cs">
+      <DependentUpon>Liste_mouvement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List_verment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="List_verment.Designer.cs">
+      <DependentUpon>List_verment.cs</DependentUpon>
     </Compile>
     <Compile Include="Modifier_Client.cs">
       <SubType>Form</SubType>
@@ -116,11 +134,23 @@
     <Compile Include="Suprimer_Movement.Designer.cs">
       <DependentUpon>Suprimer_Movement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Suprimer_Verment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suprimer_Verment.Designer.cs">
+      <DependentUpon>Suprimer_Verment.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Ajouter_Client.resx">
       <DependentUpon>Ajouter_Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ajouter_Compte.resx">
       <DependentUpon>Ajouter_Compte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajouter_Movement.resx">
+      <DependentUpon>Ajouter_Movement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajouter_Verment.resx">
+      <DependentUpon>Ajouter_Verment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -130,6 +160,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Liste_Compte.resx">
       <DependentUpon>Liste_Compte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liste_mouvement.resx">
+      <DependentUpon>Liste_mouvement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="List_verment.resx">
+      <DependentUpon>List_verment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modifier_Client.resx">
       <DependentUpon>Modifier_Client.cs</DependentUpon>
@@ -151,6 +187,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Suprimer_Compte.resx">
       <DependentUpon>Suprimer_Compte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suprimer_Movement.resx">
+      <DependentUpon>Suprimer_Movement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suprimer_Verment.resx">
+      <DependentUpon>Suprimer_Verment.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

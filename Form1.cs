@@ -69,5 +69,35 @@ namespace Gestion_de_Banque
         {
             openForm(new Suprimer_Compte());
         }
+
+        private void ajoutMouvementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openForm(new Ajouter_Movement());
+        }
+
+        private void suppressionMouvementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openForm(new Suprimer_Movement());
+        }
+
+        private void listeMouvementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openForm(new Liste_mouvement());
+        }
+
+        private void listeVirementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openForm(new List_verment());
+        }
+
+        private void ajoutVirementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openForm(new Ajouter_Verment());
+        }
+
+        private void suppremerVirementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openForm(new Suprimer_Verment());
+        }
     }
 }

@@ -99,5 +99,25 @@ namespace Gestion_de_Banque
                 return "aucun ligne a ete Modifiee";
             return "La Modification a ete effectuee";
         }
+        public dynamic GetValue(string query)
+        {
+            dynamic value = 0;
+            connection = new SqlConnection(connectionString);
+            command = new SqlCommand(query, connection);
+            try
+            {
+                connection.Open();
+                value = command.ExecuteScalar();
+            }
+            catch (SqlException e)
+            {
+                return $"Error : {e.Message}";
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return value;
+        }
     }
 }

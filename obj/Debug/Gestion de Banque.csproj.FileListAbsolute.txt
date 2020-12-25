@@ -16,3 +16,9 @@ C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises
 C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Ajouter_Compte.resources
 C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Modifier_Compte.resources
 C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Suprimer_Compte.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Ajouter_Movement.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Suprimer_Movement.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Liste_mouvement.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.List_verment.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Ajouter_Verment.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Suprimer_Verment.resources

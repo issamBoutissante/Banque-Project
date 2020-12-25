@@ -71,7 +71,6 @@
             // 
             // Solde
             // 
-            this.Solde.Enabled = false;
             this.Solde.Location = new System.Drawing.Point(251, 263);
             this.Solde.Name = "Solde";
             this.Solde.Size = new System.Drawing.Size(100, 20);
