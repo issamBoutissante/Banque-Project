@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gestion_de_Banque
 {
     public partial class Ajouter_Client : Form
     {
-        GereData gereData = new GereData();
         public Ajouter_Client()
         {
             InitializeComponent();
@@ -20,9 +12,25 @@ namespace Gestion_de_Banque
 
         private void Ajouter_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(gereData.Ajouter($"insert into Client values({Numero.Text},'{Nom.Text}','{Prenom.Text}');"));
+            try
+            {
+                Client client = new Client()
+                {
+                    Num_client = int.Parse(Numero.Text),
+                    Nom_client = Nom.Text,
+                    Prenom_Client = Prenom.Text
+                };
+                banqueEntities bq = new banqueEntities();
+                bq.Clients.Add(client);
+                bq.SaveChanges();
+                foreach (dynamic t in this.Controls)
+                    if (t is TextBox) t.Clear();
+                MessageBox.Show("l'ajout a ete effectue", "Termine", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
-
-
     }
 }

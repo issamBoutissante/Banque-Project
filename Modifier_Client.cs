@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gestion_de_Banque
 {
     public partial class Modifier_Client : Form
     {
-        GereData gereData = new GereData();
+        banqueEntities bq;
         public Modifier_Client()
         {
             InitializeComponent();
@@ -20,24 +15,37 @@ namespace Gestion_de_Banque
 
         private void Modifier_Client_Load(object sender, EventArgs e)
         {
-            foreach (var reader in gereData.GetData("select num_client as numero from client"))
-            {
-                Numero.Items.Add(reader["numero"]);
-            }
+            bq = new banqueEntities();
+            Numero.DisplayMember = "Num_client";
+            Numero.ValueMember = "Num_client";
+            Numero.DataSource= bq.Clients.ToList();
         }
 
         private void Modifier_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(gereData.Modifier($"update client set nom_client='{Nom.Text}', prenom_client='{Prenom.Text}' where num_client={Numero.SelectedItem};"));
+            try
+            {
+                bq = new banqueEntities();
+                int selectedValue = int.Parse(Numero.SelectedValue.ToString());
+                Client client = bq.Clients.Where(cl => cl.Num_client == selectedValue).First();
+                client.Nom_client = Nom.Text;
+                client.Prenom_Client = Prenom.Text;
+                bq.SaveChanges();
+                MessageBox.Show("la modification a ete effectue", "Termine", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Numero_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var reader in gereData.GetData($"select * from client where num_client={Numero.SelectedItem};"))
-            {
-                Nom.Text = reader["nom_client"].ToString();
-                Prenom.Text = reader["prenom_client"].ToString();
-            }
+            bq = new banqueEntities();
+            int selectedValue = int.Parse(Numero.SelectedValue.ToString());
+            Client client = bq.Clients.Where(cl=>cl.Num_client==selectedValue).First();
+            Nom.Text = client.Nom_client;
+            Prenom.Text = client.Prenom_Client;
         }
     }
 }

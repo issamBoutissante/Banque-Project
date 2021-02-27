@@ -22,3 +22,55 @@ C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises
 C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.List_verment.resources
 C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Ajouter_Verment.resources
 C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque\obj\Debug\Gestion_de_Banque.Suprimer_Verment.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\bin\Debug\Gestion de Banque.exe.config
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\bin\Debug\Gestion de Banque.exe
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\bin\Debug\Gestion de Banque.pdb
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\bin\Debug\EntityFramework.dll
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\bin\Debug\EntityFramework.xml
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion de Banque.csprojAssemblyReference.cache
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Ajouter_Client.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Ajouter_Compte.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Consultation_Client.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Modifier_Client.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Modifier_Compte.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Properties.Resources.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Suppremer_Client.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Suprimer_Compte.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion de Banque.csproj.GenerateResource.cache
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion de Banque.csproj.CoreCompileInputs.cache
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion de Banque.csproj.CopyComplete
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion de Banque.exe
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion de Banque.pdb
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Recherche_Client_Compte.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Consultation_Compte.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Homme.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Mouvements.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Gestion de Banque - Copy\obj\Debug\Gestion_de_Banque.Virementes.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\bin\Debug\Gestion de Banque.exe.config
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\bin\Debug\Gestion de Banque.exe
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\bin\Debug\Gestion de Banque.pdb
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\bin\Debug\EntityFramework.dll
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\bin\Debug\EntityFramework.xml
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion de Banque.csprojAssemblyReference.cache
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Ajouter_Client.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Ajouter_Compte.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Homme.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Consultation_Client.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Consultation_Compte.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Modifier_Client.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Modifier_Compte.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Mouvements.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Properties.Resources.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Recherche_Client_Compte.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Suppremer_Client.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Suprimer_Compte.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion_de_Banque.Virementes.resources
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion de Banque.csproj.GenerateResource.cache
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion de Banque.csproj.CoreCompileInputs.cache
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion de Banque.csproj.CopyComplete
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion de Banque.exe
+C:\Users\bouti\OneDrive\سطح المكتب\desktop dev client serveur\exercises\Entity Framework\obj\Debug\Gestion de Banque.pdb

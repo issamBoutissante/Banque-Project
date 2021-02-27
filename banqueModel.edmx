@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="banqueModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="Num_client" />
+          </Key>
+          <Property Name="Num_client" Type="int" Nullable="false" />
+          <Property Name="Nom_client" Type="varchar" MaxLength="20" />
+          <Property Name="Prenom_Client" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Compte">
+          <Key>
+            <PropertyRef Name="Num_Compte" />
+          </Key>
+          <Property Name="Num_Compte" Type="int" Nullable="false" />
+          <Property Name="Num_Client" Type="int" />
+          <Property Name="Solde" Type="money" />
+          <Property Name="TypeC" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Mouvement">
+          <Key>
+            <PropertyRef Name="Num_Mouvement" />
+          </Key>
+          <Property Name="Num_Mouvement" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Num_Compte" Type="int" />
+          <Property Name="Montant" Type="money" />
+          <Property Name="TypeM" Type="varchar" MaxLength="7" />
+          <Property Name="DateM" Type="date" />
+        </EntityType>
+        <EntityType Name="Virement">
+          <Key>
+            <PropertyRef Name="Num_Virement" />
+          </Key>
+          <Property Name="Num_Virement" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Num_Debiteur" Type="int" />
+          <Property Name="Num_Crediteur" Type="int" />
+          <Property Name="Montant_Vr" Type="money" />
+          <Property Name="Date_Vr" Type="datetime" />
+        </EntityType>
+        <Association Name="fk_Compte_Client">
+          <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+          <End Role="Compte" Type="Self.Compte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="Num_client" />
+            </Principal>
+            <Dependent Role="Compte">
+              <PropertyRef Name="Num_Client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Mouvement_Compte">
+          <End Role="Compte" Type="Self.Compte" Multiplicity="0..1" />
+          <End Role="Mouvement" Type="Self.Mouvement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Compte">
+              <PropertyRef Name="Num_Compte" />
+            </Principal>
+            <Dependent Role="Mouvement">
+              <PropertyRef Name="Num_Compte" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Virement_Cpt_Cr">
+          <End Role="Compte" Type="Self.Compte" Multiplicity="0..1" />
+          <End Role="Virement" Type="Self.Virement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Compte">
+              <PropertyRef Name="Num_Compte" />
+            </Principal>
+            <Dependent Role="Virement">
+              <PropertyRef Name="Num_Debiteur" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Virement_Cpt_Db">
+          <End Role="Compte" Type="Self.Compte" Multiplicity="0..1" />
+          <End Role="Virement" Type="Self.Virement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Compte">
+              <PropertyRef Name="Num_Compte" />
+            </Principal>
+            <Dependent Role="Virement">
+              <PropertyRef Name="Num_Crediteur" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="spDepot" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="numCompte" Type="int" Mode="In" />
+          <Parameter Name="montant" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="spRetrait" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="numCompte" Type="int" Mode="In" />
+          <Parameter Name="montant" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="spVerer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="numDebiteur" Type="int" Mode="In" />
+          <Parameter Name="numCrediteur" Type="int" Mode="In" />
+          <Parameter Name="montant" Type="decimal" Mode="In" />
+        </Function>
+        <EntityContainer Name="banqueModelStoreContainer">
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Compte" EntityType="Self.Compte" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mouvement" EntityType="Self.Mouvement" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Virement" EntityType="Self.Virement" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_Compte_Client" Association="Self.fk_Compte_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Compte" EntitySet="Compte" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Mouvement_Compte" Association="Self.fk_Mouvement_Compte">
+            <End Role="Compte" EntitySet="Compte" />
+            <End Role="Mouvement" EntitySet="Mouvement" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Virement_Cpt_Cr" Association="Self.fk_Virement_Cpt_Cr">
+            <End Role="Compte" EntitySet="Compte" />
+            <End Role="Virement" EntitySet="Virement" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Virement_Cpt_Db" Association="Self.fk_Virement_Cpt_Db">
+            <End Role="Compte" EntitySet="Compte" />
+            <End Role="Virement" EntitySet="Virement" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="banqueModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="Num_client" />
+          </Key>
+          <Property Name="Num_client" Type="Int32" Nullable="false" />
+          <Property Name="Nom_client" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Prenom_Client" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Comptes" Relationship="Self.fk_Compte_Client" FromRole="Client" ToRole="Compte" />
+        </EntityType>
+        <EntityType Name="Compte">
+          <Key>
+            <PropertyRef Name="Num_Compte" />
+          </Key>
+          <Property Name="Num_Compte" Type="Int32" Nullable="false" />
+          <Property Name="Num_Client" Type="Int32" />
+          <Property Name="Solde" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TypeC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Client" Relationship="Self.fk_Compte_Client" FromRole="Compte" ToRole="Client" />
+          <NavigationProperty Name="Mouvements" Relationship="Self.fk_Mouvement_Compte" FromRole="Compte" ToRole="Mouvement" />
+          <NavigationProperty Name="Virements" Relationship="Self.fk_Virement_Cpt_Cr" FromRole="Compte" ToRole="Virement" />
+          <NavigationProperty Name="Virements1" Relationship="Self.fk_Virement_Cpt_Db" FromRole="Compte" ToRole="Virement" />
+        </EntityType>
+        <EntityType Name="Mouvement">
+          <Key>
+            <PropertyRef Name="Num_Mouvement" />
+          </Key>
+          <Property Name="Num_Mouvement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Num_Compte" Type="Int32" />
+          <Property Name="Montant" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TypeM" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="DateM" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Compte" Relationship="Self.fk_Mouvement_Compte" FromRole="Mouvement" ToRole="Compte" />
+        </EntityType>
+        <EntityType Name="Virement">
+          <Key>
+            <PropertyRef Name="Num_Virement" />
+          </Key>
+          <Property Name="Num_Virement" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Num_Debiteur" Type="Int32" />
+          <Property Name="Num_Crediteur" Type="Int32" />
+          <Property Name="Montant_Vr" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Date_Vr" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Compte" Relationship="Self.fk_Virement_Cpt_Cr" FromRole="Virement" ToRole="Compte" />
+          <NavigationProperty Name="Compte1" Relationship="Self.fk_Virement_Cpt_Db" FromRole="Virement" ToRole="Compte" />
+        </EntityType>
+        <Association Name="fk_Compte_Client">
+          <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+          <End Role="Compte" Type="Self.Compte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="Num_client" />
+            </Principal>
+            <Dependent Role="Compte">
+              <PropertyRef Name="Num_Client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Mouvement_Compte">
+          <End Role="Compte" Type="Self.Compte" Multiplicity="0..1" />
+          <End Role="Mouvement" Type="Self.Mouvement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Compte">
+              <PropertyRef Name="Num_Compte" />
+            </Principal>
+            <Dependent Role="Mouvement">
+              <PropertyRef Name="Num_Compte" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Virement_Cpt_Cr">
+          <End Role="Compte" Type="Self.Compte" Multiplicity="0..1" />
+          <End Role="Virement" Type="Self.Virement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Compte">
+              <PropertyRef Name="Num_Compte" />
+            </Principal>
+            <Dependent Role="Virement">
+              <PropertyRef Name="Num_Debiteur" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Virement_Cpt_Db">
+          <End Role="Compte" Type="Self.Compte" Multiplicity="0..1" />
+          <End Role="Virement" Type="Self.Virement" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Compte">
+              <PropertyRef Name="Num_Compte" />
+            </Principal>
+            <Dependent Role="Virement">
+              <PropertyRef Name="Num_Crediteur" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="banqueEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clients" EntityType="Self.Client" />
+          <EntitySet Name="Comptes" EntityType="Self.Compte" />
+          <EntitySet Name="Mouvements" EntityType="Self.Mouvement" />
+          <EntitySet Name="Virements" EntityType="Self.Virement" />
+          <AssociationSet Name="fk_Compte_Client" Association="Self.fk_Compte_Client">
+            <End Role="Client" EntitySet="Clients" />
+            <End Role="Compte" EntitySet="Comptes" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Mouvement_Compte" Association="Self.fk_Mouvement_Compte">
+            <End Role="Compte" EntitySet="Comptes" />
+            <End Role="Mouvement" EntitySet="Mouvements" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Virement_Cpt_Cr" Association="Self.fk_Virement_Cpt_Cr">
+            <End Role="Compte" EntitySet="Comptes" />
+            <End Role="Virement" EntitySet="Virements" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Virement_Cpt_Db" Association="Self.fk_Virement_Cpt_Db">
+            <End Role="Compte" EntitySet="Comptes" />
+            <End Role="Virement" EntitySet="Virements" />
+          </AssociationSet>
+          <FunctionImport Name="spDepot">
+            <Parameter Name="numCompte" Mode="In" Type="Int32" />
+            <Parameter Name="montant" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="spRetrait">
+            <Parameter Name="numCompte" Mode="In" Type="Int32" />
+            <Parameter Name="montant" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="spVerer">
+            <Parameter Name="numDebiteur" Mode="In" Type="Int32" />
+            <Parameter Name="numCrediteur" Mode="In" Type="Int32" />
+            <Parameter Name="montant" Mode="In" Type="Decimal" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="banqueModelStoreContainer" CdmEntityContainer="banqueEntities">
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="banqueModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="Num_client" ColumnName="Num_client" />
+                <ScalarProperty Name="Nom_client" ColumnName="Nom_client" />
+                <ScalarProperty Name="Prenom_Client" ColumnName="Prenom_Client" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comptes">
+            <EntityTypeMapping TypeName="banqueModel.Compte">
+              <MappingFragment StoreEntitySet="Compte">
+                <ScalarProperty Name="Num_Compte" ColumnName="Num_Compte" />
+                <ScalarProperty Name="Num_Client" ColumnName="Num_Client" />
+                <ScalarProperty Name="Solde" ColumnName="Solde" />
+                <ScalarProperty Name="TypeC" ColumnName="TypeC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mouvements">
+            <EntityTypeMapping TypeName="banqueModel.Mouvement">
+              <MappingFragment StoreEntitySet="Mouvement">
+                <ScalarProperty Name="Num_Mouvement" ColumnName="Num_Mouvement" />
+                <ScalarProperty Name="Num_Compte" ColumnName="Num_Compte" />
+                <ScalarProperty Name="Montant" ColumnName="Montant" />
+                <ScalarProperty Name="TypeM" ColumnName="TypeM" />
+                <ScalarProperty Name="DateM" ColumnName="DateM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Virements">
+            <EntityTypeMapping TypeName="banqueModel.Virement">
+              <MappingFragment StoreEntitySet="Virement">
+                <ScalarProperty Name="Num_Virement" ColumnName="Num_Virement" />
+                <ScalarProperty Name="Num_Debiteur" ColumnName="Num_Debiteur" />
+                <ScalarProperty Name="Num_Crediteur" ColumnName="Num_Crediteur" />
+                <ScalarProperty Name="Montant_Vr" ColumnName="Montant_Vr" />
+                <ScalarProperty Name="Date_Vr" ColumnName="Date_Vr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spDepot" FunctionName="banqueModel.Store.spDepot" />
+          <FunctionImportMapping FunctionImportName="spRetrait" FunctionName="banqueModel.Store.spRetrait" />
+          <FunctionImportMapping FunctionImportName="spVerer" FunctionName="banqueModel.Store.spVerer" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

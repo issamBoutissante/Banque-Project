@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,9 +36,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,48 +71,44 @@
     <Compile Include="Ajouter_Compte.Designer.cs">
       <DependentUpon>Ajouter_Compte.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ajouter_Movement.cs">
+    <Compile Include="banqueModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banqueModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="banqueModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banqueModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="banqueModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banqueModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <DependentUpon>banqueModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Compte.cs">
+      <DependentUpon>banqueModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Homme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ajouter_Movement.Designer.cs">
-      <DependentUpon>Ajouter_Movement.cs</DependentUpon>
+    <Compile Include="Homme.Designer.cs">
+      <DependentUpon>Homme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ajouter_Verment.cs">
+    <Compile Include="Consultation_Client.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ajouter_Verment.Designer.cs">
-      <DependentUpon>Ajouter_Verment.cs</DependentUpon>
+    <Compile Include="Consultation_Client.Designer.cs">
+      <DependentUpon>Consultation_Client.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Consultation_Compte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GereData.cs" />
-    <Compile Include="Liste_Client.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Liste_Client.Designer.cs">
-      <DependentUpon>Liste_Client.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Liste_Compte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Liste_Compte.Designer.cs">
-      <DependentUpon>Liste_Compte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Liste_mouvement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Liste_mouvement.Designer.cs">
-      <DependentUpon>Liste_mouvement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="List_verment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="List_verment.Designer.cs">
-      <DependentUpon>List_verment.cs</DependentUpon>
+    <Compile Include="Consultation_Compte.Designer.cs">
+      <DependentUpon>Consultation_Compte.cs</DependentUpon>
     </Compile>
     <Compile Include="Modifier_Client.cs">
       <SubType>Form</SubType>
@@ -114,8 +122,23 @@
     <Compile Include="Modifier_Compte.Designer.cs">
       <DependentUpon>Modifier_Compte.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mouvement.cs">
+      <DependentUpon>banqueModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mouvements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mouvements.Designer.cs">
+      <DependentUpon>Mouvements.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recherche_Client_Compte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recherche_Client_Compte.Designer.cs">
+      <DependentUpon>Recherche_Client_Compte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Suppremer_Client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,17 +151,14 @@
     <Compile Include="Suprimer_Compte.Designer.cs">
       <DependentUpon>Suprimer_Compte.cs</DependentUpon>
     </Compile>
-    <Compile Include="Suprimer_Movement.cs">
+    <Compile Include="Virement.cs">
+      <DependentUpon>banqueModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Virementes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Suprimer_Movement.Designer.cs">
-      <DependentUpon>Suprimer_Movement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Suprimer_Verment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Suprimer_Verment.Designer.cs">
-      <DependentUpon>Suprimer_Verment.cs</DependentUpon>
+    <Compile Include="Virementes.Designer.cs">
+      <DependentUpon>Virementes.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Ajouter_Client.resx">
       <DependentUpon>Ajouter_Client.cs</DependentUpon>
@@ -146,32 +166,23 @@
     <EmbeddedResource Include="Ajouter_Compte.resx">
       <DependentUpon>Ajouter_Compte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ajouter_Movement.resx">
-      <DependentUpon>Ajouter_Movement.cs</DependentUpon>
+    <EmbeddedResource Include="Homme.resx">
+      <DependentUpon>Homme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ajouter_Verment.resx">
-      <DependentUpon>Ajouter_Verment.cs</DependentUpon>
+    <EmbeddedResource Include="Consultation_Client.resx">
+      <DependentUpon>Consultation_Client.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Liste_Client.resx">
-      <DependentUpon>Liste_Client.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Liste_Compte.resx">
-      <DependentUpon>Liste_Compte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Liste_mouvement.resx">
-      <DependentUpon>Liste_mouvement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="List_verment.resx">
-      <DependentUpon>List_verment.cs</DependentUpon>
+    <EmbeddedResource Include="Consultation_Compte.resx">
+      <DependentUpon>Consultation_Compte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modifier_Client.resx">
       <DependentUpon>Modifier_Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modifier_Compte.resx">
       <DependentUpon>Modifier_Compte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mouvements.resx">
+      <DependentUpon>Mouvements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -182,18 +193,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Recherche_Client_Compte.resx">
+      <DependentUpon>Recherche_Client_Compte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Suppremer_Client.resx">
       <DependentUpon>Suppremer_Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Suprimer_Compte.resx">
       <DependentUpon>Suprimer_Compte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Suprimer_Movement.resx">
-      <DependentUpon>Suprimer_Movement.cs</DependentUpon>
+    <EmbeddedResource Include="Virementes.resx">
+      <DependentUpon>Virementes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Suprimer_Verment.resx">
-      <DependentUpon>Suprimer_Verment.cs</DependentUpon>
-    </EmbeddedResource>
+    <EntityDeploy Include="banqueModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>banqueModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="banqueModel.edmx.diagram">
+      <DependentUpon>banqueModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -207,5 +226,28 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="banqueModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>banqueModel.edmx</DependentUpon>
+      <LastGenOutput>banqueModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="banqueModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>banqueModel.edmx</DependentUpon>
+      <LastGenOutput>banqueModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

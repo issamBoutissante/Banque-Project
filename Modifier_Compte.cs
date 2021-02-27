@@ -1,49 +1,76 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Gestion_de_Banque
 {
     public partial class Modifier_Compte : Form
     {
-        GereData gereData = new GereData();
+        banqueEntities bq;
         public Modifier_Compte()
         {
             InitializeComponent();
         }
-
         private void Modifier_Load(object sender, EventArgs e)
         {
-            foreach(var reader in gereData.GetData($"select num_Compte from compte ;"))
+            try
             {
-                Numero_Compte.Items.Add(reader["num_Compte"]);
+                bq = new banqueEntities();
+                Numero_Compte.DisplayMember = "Num_Compte";
+                Numero_Compte.ValueMember = "Num_Compte";
+                Numero_Compte.DataSource = bq.Comptes.ToList();
+
+                Numero_Client.DisplayMember = "Num_Client";
+                Numero_Client.ValueMember = "Num_Client";
+                Numero_Client.DataSource = bq.Clients.ToList();
+
             }
-            foreach (var reader in gereData.GetData($"select num_Client from client ;"))
+            catch (Exception ex)
             {
-                Numero_Client.Items.Add(reader["num_client"]);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
 
         private void Numero_Compte_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var reader in gereData.GetData($"select * from compte where num_compte={Numero_Compte.SelectedItem}"))
+            try
             {
-                Numero_Client.Text= reader["num_client"].ToString();
-                Solde.Text = reader["solde"].ToString();
-                Type_Compte.Text = reader["typeC"].ToString();
+                bq = new banqueEntities();
+                int selectedValue = int.Parse(Numero_Compte.SelectedValue.ToString());
+                Compte compte = bq.Comptes.Where(comp=>comp.Num_Compte==selectedValue).First();
+                Numero_Client.Text = compte.Num_Client.ToString();
+                Solde.Text = compte.Solde.ToString();
+                Type_Compte.Text = compte.TypeC;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Modifier_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(gereData.Modifier($"update compte set num_client={Numero_Client.SelectedItem},typeC='{Type_Compte.Text}' where num_compte={Numero_Compte.SelectedItem}"));
+            try
+            {
+                bq = new banqueEntities();
+                int selectedValue = int.Parse(Numero_Compte.SelectedValue.ToString());
+                Compte compte = bq.Comptes.Where(com=>com.Num_Compte==selectedValue).First();
+                compte.Num_Client= int.Parse(Numero_Client.Text);
+                compte.Solde= decimal.Parse(Solde.Text);
+                compte.TypeC= Type_Compte.Text;
+                bq.SaveChanges();
+                MessageBox.Show("la modification a ete effectue", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

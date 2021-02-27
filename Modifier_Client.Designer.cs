@@ -40,18 +40,20 @@
             // 
             // Numero
             // 
+            this.Numero.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Numero.FormattingEnabled = true;
-            this.Numero.Location = new System.Drawing.Point(219, 179);
+            this.Numero.Location = new System.Drawing.Point(158, 94);
             this.Numero.Name = "Numero";
-            this.Numero.Size = new System.Drawing.Size(102, 21);
+            this.Numero.Size = new System.Drawing.Size(102, 28);
             this.Numero.TabIndex = 24;
             this.Numero.SelectedIndexChanged += new System.EventHandler(this.Numero_SelectedIndexChanged);
             // 
             // Modifier
             // 
-            this.Modifier.Location = new System.Drawing.Point(470, 217);
+            this.Modifier.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Modifier.Location = new System.Drawing.Point(327, 140);
             this.Modifier.Name = "Modifier";
-            this.Modifier.Size = new System.Drawing.Size(75, 23);
+            this.Modifier.Size = new System.Drawing.Size(75, 29);
             this.Modifier.TabIndex = 23;
             this.Modifier.Text = "Modifier";
             this.Modifier.UseVisualStyleBackColor = true;
@@ -60,51 +62,56 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(328, 84);
+            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(12, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 24);
+            this.label4.Size = new System.Drawing.Size(153, 24);
             this.label4.TabIndex = 22;
             this.label4.Text = "Modifier Client";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(127, 324);
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(64, 192);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Prenom";
             // 
             // Prenom
             // 
-            this.Prenom.Location = new System.Drawing.Point(221, 324);
+            this.Prenom.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prenom.Location = new System.Drawing.Point(158, 192);
             this.Prenom.Name = "Prenom";
-            this.Prenom.Size = new System.Drawing.Size(100, 20);
+            this.Prenom.Size = new System.Drawing.Size(100, 26);
             this.Prenom.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(125, 251);
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(64, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(37, 20);
             this.label2.TabIndex = 19;
             this.label2.Text = "Nom";
             // 
             // Nom
             // 
-            this.Nom.Location = new System.Drawing.Point(219, 251);
+            this.Nom.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nom.Location = new System.Drawing.Point(158, 143);
             this.Nom.Name = "Nom";
-            this.Nom.Size = new System.Drawing.Size(100, 20);
+            this.Nom.Size = new System.Drawing.Size(100, 26);
             this.Nom.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 182);
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(64, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(56, 20);
             this.label1.TabIndex = 17;
             this.label1.Text = "Numero";
             // 
@@ -112,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(450, 300);
             this.Controls.Add(this.Numero);
             this.Controls.Add(this.Modifier);
             this.Controls.Add(this.label4);
@@ -121,6 +128,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Nom);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Modifier_Client";
             this.Text = "Modifier_Client";
             this.Load += new System.EventHandler(this.Modifier_Client_Load);
